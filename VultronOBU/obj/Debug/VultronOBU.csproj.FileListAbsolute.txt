@@ -1,0 +1,10 @@
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\bin\Debug\VultronOBU.exe.config
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\bin\Debug\VultronOBU.exe
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\bin\Debug\VultronOBU.pdb
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.csprojAssemblyReference.cache
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.Form1.resources
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.Properties.Resources.resources
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.csproj.GenerateResource.cache
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.csproj.CoreCompileInputs.cache
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.exe
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.pdb
