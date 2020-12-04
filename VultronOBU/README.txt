@@ -7,3 +7,5 @@ Ha megfelelő járatszám lett megadva, akkor a kocsiszámot kell megadni. Ha a 
 A kocsiszám megadása után a járatszámhoz tartozó járatok kiválasztására kerül sor, itt a vasút esetén egy vonatszámhoz egy járat tartozik, így ENTER megnyomásával léphetünk tovább. 
 A következő képernyőn az induló megállót kell kiválasztani (pl. ha csak menet közben kapcsolnánk be az egységet). 
 Ezután eljutunk a fő képernyőre, ahol láthatjuk a vonat számát, nemét, a végállomást, a jelenlegi állomást, és a kocsiszámot. Ezen a képernyőn a megállókat tudjuk léptetni a képzeletbeli vonat haladásának megfelelően a fel és le nyilakkal.
+
+A program egy LED mátrix kijelzőt is szimulál, a program indulásakor külön ablakban jelenik meg, kezdetben üresen. Ha a vezérlőn sikeresen eljutunk a fő képernyőre, onnantól aktív a kijelző, és a valósággal közel megegyezően szimulálja a kijelző működését.

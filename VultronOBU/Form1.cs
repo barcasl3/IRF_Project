@@ -41,6 +41,9 @@ namespace VultronOBU
             Setup();
             SetEventHandlers();
             led.parentForm = this;
+            Console.WriteLine(this.Location);
+            led.Location = new Point(this.Location.X, this.Location.Y + this.Height);
+            led.StartPosition = FormStartPosition.Manual;
             led.Show();
         }
 

@@ -377,10 +377,12 @@
             this.Controls.Add(this.btn_Num1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(200, 200);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(554, 329);
             this.MinimumSize = new System.Drawing.Size(554, 329);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Vultron vezérlő";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
