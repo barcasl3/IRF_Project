@@ -28,17 +28,19 @@ namespace VultronOBU
         public int currentCarNumber = -1;
         public Trains selectedVonat;
         public Stations[] selectedStations;
+        public int megalloIndex = 0;
+        
         LEDKijelzo led = new LEDKijelzo();
         Database1Entities context = new Database1Entities();
 
         int counter = 0;
-        int megalloIndex = 0;
 
         public Form1()
         {
             InitializeComponent();
             Setup();
             SetEventHandlers();
+            led.parentForm = this;
             led.Show();
         }
 
@@ -164,6 +166,7 @@ namespace VultronOBU
                 case Enums.States.BaseScreen:
                     {
                         vultronLCD1.Lines = new string[] { this.selectedVonat.trainnumber.ToString() + " " + this.selectedVonat.traintype, this.selectedVonat.endstation, this.selectedStations[megalloIndex].stationname, this.currentCarNumber == -1 ? "" : "Kocsiszám: " + this.currentCarNumber.ToString() };
+                        led.InitKijelzo();
                         AlignTextCenter();
                         break;
                     }
