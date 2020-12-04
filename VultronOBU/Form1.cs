@@ -28,6 +28,7 @@ namespace VultronOBU
         public int currentCarNumber = -1;
         public Trains selectedVonat;
         public Stations[] selectedStations;
+        LEDKijelzo led = new LEDKijelzo();
         Database1Entities context = new Database1Entities();
 
         int counter = 0;
@@ -38,6 +39,7 @@ namespace VultronOBU
             InitializeComponent();
             Setup();
             SetEventHandlers();
+            led.Show();
         }
 
         void Setup()

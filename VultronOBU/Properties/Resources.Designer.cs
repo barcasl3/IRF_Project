@@ -63,6 +63,16 @@ namespace VultronOBU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flirt_belso {
+            get {
+                object obj = ResourceManager.GetObject("flirt_belso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vultron_ures {
             get {
                 object obj = ResourceManager.GetObject("vultron_ures", resourceCulture);

@@ -82,6 +82,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LEDKijelzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LEDKijelzo.Designer.cs">
+      <DependentUpon>LEDKijelzo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,8 +131,12 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="README.txt" />
+    <None Include="Resources\flirt_belso.png" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LEDKijelzo.resx">
+      <DependentUpon>LEDKijelzo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
