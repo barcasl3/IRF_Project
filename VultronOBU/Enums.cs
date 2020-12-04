@@ -20,5 +20,14 @@ namespace VultronOBU
             Error,
             EnterKocsiszam
         }
+
+        public enum LEDStates
+        {
+            Welcome,
+            RouteInfo,
+            NextStop,
+            DateTime,
+            Goodbye
+        }
     }
 }
