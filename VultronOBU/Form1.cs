@@ -161,7 +161,7 @@ namespace VultronOBU
                     }
                 case Enums.States.BaseScreen:
                     {
-                        vultronLCD1.Lines = new string[] { this.selectedVonat.trainnumber.ToString() + " " + this.selectedVonat.traintype, this.selectedVonat.endstation, this.selectedStations[megalloIndex].stationname, "Kocsiszám: " + this.currentCarNumber.ToString() };
+                        vultronLCD1.Lines = new string[] { this.selectedVonat.trainnumber.ToString() + " " + this.selectedVonat.traintype, this.selectedVonat.endstation, this.selectedStations[megalloIndex].stationname, this.currentCarNumber == -1 ? "" : "Kocsiszám: " + this.currentCarNumber.ToString() };
                         AlignTextCenter();
                         break;
                     }
@@ -328,7 +328,7 @@ namespace VultronOBU
                     }
                 case Enums.States.BaseScreen:
                     {
-                        vultronLCD1.Lines = new string[] { this.selectedVonat.trainnumber.ToString() + " " + this.selectedVonat.traintype, this.selectedVonat.endstation, this.selectedStations[megalloIndex].stationname, "Kocsiszám: " + this.currentCarNumber.ToString() };
+                        vultronLCD1.Lines = new string[] { this.selectedVonat.trainnumber.ToString() + " " + this.selectedVonat.traintype, this.selectedVonat.endstation, this.selectedStations[megalloIndex].stationname, this.currentCarNumber == -1 ? "" : "Kocsiszám: " + this.currentCarNumber.ToString() };
                         AlignTextCenter();
                         break;
                     }
