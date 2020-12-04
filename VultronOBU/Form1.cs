@@ -268,6 +268,15 @@ namespace VultronOBU
                         updateLCD();
                         break;
                     }
+                case Enums.States.BaseScreen:
+                    {
+                        if(megalloIndex != selectedStations.Length - 1)
+                        {
+                            megalloIndex++;
+                        }
+                        updateLCD();
+                        break;
+                    }
             }
         }
 
@@ -283,6 +292,15 @@ namespace VultronOBU
 
                         var megalloLista = megallok.ToArray();
 
+                        if (megalloIndex != 0)
+                        {
+                            megalloIndex--;
+                        }
+                        updateLCD();
+                        break;
+                    }
+                case Enums.States.BaseScreen:
+                    {
                         if (megalloIndex != 0)
                         {
                             megalloIndex--;
@@ -306,6 +324,12 @@ namespace VultronOBU
                         var megalloLista = megallok.ToArray();
 
                         vultronLCD1.Lines = new string[] { "Válasszon megállót!", megalloLista[megalloIndex].stationname };
+                        break;
+                    }
+                case Enums.States.BaseScreen:
+                    {
+                        vultronLCD1.Lines = new string[] { this.selectedVonat.trainnumber.ToString() + " " + this.selectedVonat.traintype, this.selectedVonat.endstation, this.selectedStations[megalloIndex].stationname, "Kocsiszám: " + this.currentCarNumber.ToString() };
+                        AlignTextCenter();
                         break;
                     }
             }
