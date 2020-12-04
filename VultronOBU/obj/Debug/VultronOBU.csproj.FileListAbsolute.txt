@@ -8,3 +8,8 @@ C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.csproj.Ge
 C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.csproj.CoreCompileInputs.cache
 C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.exe
 C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.pdb
+C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\bin\Debug\EntityFramework.dll
+C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\bin\Debug\EntityFramework.xml
+C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.csproj.CopyComplete

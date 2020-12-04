@@ -10,7 +10,7 @@ using System.IO;
 
 namespace VultronOBU
 {
-    class VultronLCD : TextBox
+    class VultronLCD : RichTextBox
     {
         public VultronLCD()
         {
@@ -21,7 +21,7 @@ namespace VultronOBU
             this.BackColor = Color.Black;
             this.ForeColor = Color.FromArgb(255, 194, 0);
             this.ReadOnly = true;
-
+            this.FontHeight = 4;
             // TODO: font beállítása
         }
     }
