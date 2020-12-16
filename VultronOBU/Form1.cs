@@ -18,7 +18,6 @@ namespace VultronOBU
         Excel.Workbook xlWB;
         Excel.Worksheet xlSheet;
 
-        //int currentState = (int)Enums.States.Startup;
         private int currState;
 
         public int currentState
