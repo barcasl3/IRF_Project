@@ -403,6 +403,23 @@ namespace VultronOBU
                 xlSheet.Cells[rowCount, 1] = s.stationname;
                 rowCount++;
             }
+
+            Excel.Range dataRange = xlSheet.get_Range(GetCell(1, 2), GetCell(5, 2));
+            dataRange.Font.Bold = true;
+            dataRange.EntireColumn.AutoFit();
+            dataRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+
+            Excel.Range labelRange = xlSheet.get_Range(GetCell(2, 1), GetCell(5, 1));
+            labelRange.Font.Underline = true;
+            labelRange.EntireColumn.AutoFit();
+
+            Excel.Range fullRange = xlSheet.get_Range(GetCell(2, 1), GetCell(4, 2));
+            fullRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+
+            xlSheet.Cells[1, 1].Font.Size = 24;
+            xlSheet.Cells[1, 1].Font.Bold = true;
+            xlSheet.Cells[6, 1].Font.Italic = true;
+            xlSheet.Cells[6 + selectedStations.Length - 1, 1].Font.Italic = true;
         }
 
         private string GetCell(int x, int y)
