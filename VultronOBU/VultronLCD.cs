@@ -22,7 +22,13 @@ namespace VultronOBU
             this.ForeColor = Color.FromArgb(255, 194, 0);
             this.ReadOnly = true;
             this.FontHeight = 4;
-            // TODO: font beállítása
+
+            // https://stackoverflow.com/questions/24022411/loading-a-font-directly-from-a-file-in-c-sharp
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"C:\temp\LcdSolid-VPzB.ttf");
+            Font font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+
+            this.Font = font;
         }
     }
 }

@@ -75,10 +75,10 @@
             this.vultronLCD1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vultronLCD1.Font = new System.Drawing.Font("LCD Solid", 10F);
             this.vultronLCD1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(0)))));
-            this.vultronLCD1.Location = new System.Drawing.Point(83, 67);
+            this.vultronLCD1.Location = new System.Drawing.Point(81, 65);
             this.vultronLCD1.Name = "vultronLCD1";
             this.vultronLCD1.ReadOnly = true;
-            this.vultronLCD1.Size = new System.Drawing.Size(191, 70);
+            this.vultronLCD1.Size = new System.Drawing.Size(196, 73);
             this.vultronLCD1.TabIndex = 23;
             this.vultronLCD1.Text = "";
             // 
@@ -412,8 +412,8 @@
         private VultronButton vultronButton2;
         private VultronSpecButton btn_Up;
         private VultronSpecButton btn_Down;
-        private VultronLCD vultronLCD1;
         private System.Windows.Forms.Timer timer1;
+        private VultronLCD vultronLCD1;
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,12 @@ namespace VultronOBU
         public LEDKijelzo()
         {
             InitializeComponent();
+
+            // https://stackoverflow.com/questions/24022411/loading-a-font-directly-from-a-file-in-c-sharp
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"C:\temp\BUSE.ttf");
+            Font font = new Font(pfc.Families[0], 72, FontStyle.Regular);
+            label1.Font = font;
 
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
