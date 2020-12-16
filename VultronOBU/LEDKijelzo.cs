@@ -45,14 +45,11 @@ namespace VultronOBU
         {
             if(parentForm.megalloIndex == 0)
             {
-                //label1.TextAlign = ContentAlignment.MiddleCenter;
                 DisplayState = (int)Enums.LEDStates.Welcome;
-                //label1.Text = "Köszöntjük Önöket!";
             }
             else
             {
                 DisplayState = (int)Enums.LEDStates.RouteInfo;
-                //label1.Text = parentForm.selectedVonat.trainnumber.ToString() + ">" + parentForm.selectedVonat.endstation;
             }
             timer1.Start();
         }
@@ -97,40 +94,27 @@ namespace VultronOBU
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            /*if(parentForm.megalloIndex == 0 && DisplayState == (int)Enums.LEDStates.DateTime)
+            if (DisplayState < (int)Enums.LEDStates.DateTime)
             {
-                DisplayState = (int)Enums.LEDStates.Welcome;
+                DisplayState++;
             }
-
-            else if(parentForm.megalloIndex == parentForm.selectedStations.Length - 1 && DisplayState == (int)Enums.LEDStates.DateTime)
-            {
-                DisplayState = (int)Enums.LEDStates.Goodbye;
-            }
-            
             else
-            {*/
-                if (DisplayState < (int)Enums.LEDStates.DateTime)
+            {
+                if (parentForm.megalloIndex == 0 && DisplayState == (int)Enums.LEDStates.DateTime)
                 {
-                    DisplayState++;
+                    DisplayState = (int)Enums.LEDStates.Welcome;
                 }
+
+                else if (parentForm.megalloIndex == parentForm.selectedStations.Length - 1 && DisplayState == (int)Enums.LEDStates.DateTime)
+                {
+                    DisplayState = (int)Enums.LEDStates.Goodbye;
+                }
+                    
                 else
                 {
-                    if (parentForm.megalloIndex == 0 && DisplayState == (int)Enums.LEDStates.DateTime)
-                    {
-                        DisplayState = (int)Enums.LEDStates.Welcome;
-                    }
-
-                    else if (parentForm.megalloIndex == parentForm.selectedStations.Length - 1 && DisplayState == (int)Enums.LEDStates.DateTime)
-                    {
-                        DisplayState = (int)Enums.LEDStates.Goodbye;
-                    }
-                    
-                    else
-                    {
-                        DisplayState = (int)Enums.LEDStates.RouteInfo;
-                    }
+                    DisplayState = (int)Enums.LEDStates.RouteInfo;
                 }
-            //}
+            }
         }
     }
 }

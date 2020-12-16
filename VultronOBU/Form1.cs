@@ -358,7 +358,10 @@ namespace VultronOBU
 
         private void btn_D_Click(object sender, EventArgs e)
         {
-            CreateExcel();
+            if(this.currentState == (int)Enums.States.BaseScreen)
+            {
+                CreateExcel();
+            }
         }
 
         void CreateExcel()
