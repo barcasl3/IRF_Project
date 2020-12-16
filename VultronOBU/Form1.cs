@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace VultronOBU
 {
     public partial class Form1 : Form
     {
+        Excel.Application xlApp;
+        Excel.Workbook xlWB;
+        Excel.Worksheet xlSheet;
+
         //int currentState = (int)Enums.States.Startup;
         private int currState;
 
@@ -106,7 +112,7 @@ namespace VultronOBU
                         if (vultronLCD1.Lines[1] == "_")
                         {
                             currentCarNumber = Convert.ToInt32(vultronLCD1.Lines[1].Remove(0) + buttonText);
-                            vultronLCD1.Lines = new string[] { "Kérem a kocsiszamot!", vultronLCD1.Lines[1].Remove(0) + buttonText };
+                            vultronLCD1.Lines = new string[] { "Kérem a kocsiszámot!", vultronLCD1.Lines[1].Remove(0) + buttonText };
                         }
                         else
                         {
@@ -348,6 +354,72 @@ namespace VultronOBU
             vultronLCD1.SelectAll();
             vultronLCD1.SelectionAlignment = HorizontalAlignment.Center;
             vultronLCD1.DeselectAll();
+        }
+
+        private void btn_D_Click(object sender, EventArgs e)
+        {
+            CreateExcel();
+        }
+
+        void CreateExcel()
+        {
+            try
+            {
+                xlApp = new Excel.Application();
+                xlWB = xlApp.Workbooks.Add(Missing.Value);
+                xlSheet = xlWB.ActiveSheet;
+
+                CreateTable();
+
+                xlApp.Visible = true;
+                xlApp.UserControl = true;
+            }
+            catch(Exception ex)
+            {
+                string errMsg = string.Format("Error: {0}\nLine: {1}", ex.Message, ex.Source);
+                MessageBox.Show(errMsg, "Error");
+
+                xlWB.Close(false, Type.Missing, Type.Missing);
+                xlApp.Quit();
+                xlWB = null;
+                xlApp = null;
+            }
+        }
+
+        void CreateTable()
+        {
+            xlSheet.Cells[1, 1] = "Vonat menetrend exportja";
+            xlSheet.Cells[2, 1] = "Vonat száma:";
+            xlSheet.Cells[2, 2] = this.selectedVonat.trainnumber;
+            xlSheet.Cells[3, 1] = "Vonat neme:";
+            xlSheet.Cells[3, 2] = this.selectedVonat.traintype;
+            xlSheet.Cells[4, 1] = "Vonat végállomása:";
+            xlSheet.Cells[4, 2] = this.selectedVonat.endstation;
+            xlSheet.Cells[5, 1] = "Vonat megállási helyei:";
+
+            int rowCount = 6;
+            foreach(Stations s in this.selectedStations)
+            {
+                xlSheet.Cells[rowCount, 1] = s.stationname;
+                rowCount++;
+            }
+        }
+
+        private string GetCell(int x, int y)
+        {
+            string ExcelCoordinate = "";
+            int dividend = y;
+            int modulo;
+
+            while (dividend > 0)
+            {
+                modulo = (dividend - 1) % 26;
+                ExcelCoordinate = Convert.ToChar(65 + modulo).ToString() + ExcelCoordinate;
+                dividend = (int)((dividend - modulo) / 26);
+            }
+            ExcelCoordinate += x.ToString();
+
+            return ExcelCoordinate;
         }
     }
 }

@@ -14,3 +14,4 @@ C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\bin\Debug\EntityFramework.xml
 C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.csproj.CopyComplete
 C:\Users\ktzs\Source\Repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.LEDKijelzo.resources
+C:\Users\ktzs\source\repos\IRF_Project\VultronOBU\obj\Debug\VultronOBU.csproj.ResolveComReference.cache

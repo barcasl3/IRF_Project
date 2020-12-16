@@ -34,8 +34,8 @@
             this.vultronLCD1 = new VultronOBU.VultronLCD();
             this.btn_Down = new VultronOBU.VultronSpecButton();
             this.btn_Up = new VultronOBU.VultronSpecButton();
-            this.vultronButton2 = new VultronOBU.VultronButton();
-            this.vultronButton1 = new VultronOBU.VultronButton();
+            this.btn_D = new VultronOBU.VultronButton();
+            this.btn_C = new VultronOBU.VultronButton();
             this.btn_B = new VultronOBU.VultronButton();
             this.btn_A = new VultronOBU.VultronButton();
             this.btn_PS = new VultronOBU.VultronButton();
@@ -110,33 +110,34 @@
             this.btn_Up.UseVisualStyleBackColor = false;
             this.btn_Up.Click += new System.EventHandler(this.btn_Up_Click);
             // 
-            // vultronButton2
+            // btn_D
             // 
-            this.vultronButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
-            this.vultronButton2.FlatAppearance.BorderSize = 0;
-            this.vultronButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vultronButton2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.vultronButton2.ForeColor = System.Drawing.Color.Black;
-            this.vultronButton2.Location = new System.Drawing.Point(191, 211);
-            this.vultronButton2.Name = "vultronButton2";
-            this.vultronButton2.Size = new System.Drawing.Size(42, 42);
-            this.vultronButton2.TabIndex = 20;
-            this.vultronButton2.Text = "D";
-            this.vultronButton2.UseVisualStyleBackColor = false;
+            this.btn_D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btn_D.FlatAppearance.BorderSize = 0;
+            this.btn_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_D.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.btn_D.ForeColor = System.Drawing.Color.Black;
+            this.btn_D.Location = new System.Drawing.Point(191, 211);
+            this.btn_D.Name = "btn_D";
+            this.btn_D.Size = new System.Drawing.Size(42, 42);
+            this.btn_D.TabIndex = 20;
+            this.btn_D.Text = "D";
+            this.btn_D.UseVisualStyleBackColor = false;
+            this.btn_D.Click += new System.EventHandler(this.btn_D_Click);
             // 
-            // vultronButton1
+            // btn_C
             // 
-            this.vultronButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
-            this.vultronButton1.FlatAppearance.BorderSize = 0;
-            this.vultronButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vultronButton1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.vultronButton1.ForeColor = System.Drawing.Color.Black;
-            this.vultronButton1.Location = new System.Drawing.Point(140, 211);
-            this.vultronButton1.Name = "vultronButton1";
-            this.vultronButton1.Size = new System.Drawing.Size(42, 42);
-            this.vultronButton1.TabIndex = 19;
-            this.vultronButton1.Text = "C";
-            this.vultronButton1.UseVisualStyleBackColor = false;
+            this.btn_C.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btn_C.FlatAppearance.BorderSize = 0;
+            this.btn_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_C.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.btn_C.ForeColor = System.Drawing.Color.Black;
+            this.btn_C.Location = new System.Drawing.Point(140, 211);
+            this.btn_C.Name = "btn_C";
+            this.btn_C.Size = new System.Drawing.Size(42, 42);
+            this.btn_C.TabIndex = 19;
+            this.btn_C.Text = "C";
+            this.btn_C.UseVisualStyleBackColor = false;
             // 
             // btn_B
             // 
@@ -357,8 +358,8 @@
             this.Controls.Add(this.vultronLCD1);
             this.Controls.Add(this.btn_Down);
             this.Controls.Add(this.btn_Up);
-            this.Controls.Add(this.vultronButton2);
-            this.Controls.Add(this.vultronButton1);
+            this.Controls.Add(this.btn_D);
+            this.Controls.Add(this.btn_C);
             this.Controls.Add(this.btn_B);
             this.Controls.Add(this.btn_A);
             this.Controls.Add(this.btn_PS);
@@ -408,8 +409,8 @@
         private VultronButton btn_PS;
         private VultronButton btn_A;
         private VultronButton btn_B;
-        private VultronButton vultronButton1;
-        private VultronButton vultronButton2;
+        private VultronButton btn_C;
+        private VultronButton btn_D;
         private VultronSpecButton btn_Up;
         private VultronSpecButton btn_Down;
         private System.Windows.Forms.Timer timer1;
